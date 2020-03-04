@@ -48,11 +48,12 @@ Typecho_Admin_Theme：[Github](https://github.com/yn-zxj/Typecho_Admin_Theme)
 五、使用说明
 ------
 
-&emsp;&emsp;下载本压缩包，解压至admin目录选择全部覆盖。建议新建admin目录并解压到内，重命名原admin目录，作为备份。
+&emsp;&emsp;下载本全部文件，解压至admin目录选择全部覆盖。建议新建admin目录并解压到内，重命名原admin目录，作为备份。
 
 六、结束语
 -----
-&emsp;&emsp;主题交流群：![](http://img.bt66.cn/blogqun.jpg)
+&emsp;&emsp;主题交流群：
+![](http://img.bt66.cn/blogpurple.png)
 
 &emsp;&emsp;本主题的适配花的时间也不算太多，假如在使用过程中发现错误或者有什么好的建议，欢迎留言或者到github提交issues。最后如果你觉得此模板还不错，不妨推荐给其他人；假如有您的打赏，那最好不过啦！ 
 ![](http://img.bt66.cn/blogsk.png)
