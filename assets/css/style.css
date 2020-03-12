@@ -13342,6 +13342,14 @@ dl {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1; }
+  
+h2 a:hover {
+    color: white;
+}
+
+h2 a {
+    color: white;
+}
 
 /*滚动条定义设置*/
 ::-webkit-scrollbar {
