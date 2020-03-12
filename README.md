@@ -58,5 +58,7 @@ Typecho_Admin_Theme：[Github](https://github.com/yn-zxj/Typecho_Admin_Theme)
 -----
 &emsp;&emsp;主题交流群：1074118225
 
+&emsp;&emsp;我的博客：http://bt66.cn/
+
 &emsp;&emsp;本主题的适配花的时间也不算太多，假如在使用过程中发现错误或者有什么好的建议，欢迎留言或者到github提交issues。最后如果你觉得此模板还不错，不妨推荐给其他人；假如有您的打赏，那最好不过啦！ 
 ![](http://img.bt66.cn/blogsk.png)
