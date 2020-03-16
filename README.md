@@ -3,11 +3,11 @@
 零、插件菜单面板
 ------
 
-**修复：**1.修改了**menu.php**,增加一行代码，删除很多行代码！
+**修复**:1.修改了**menu.php**,增加一行代码，删除很多行代码！
 
-​            2.修改了**var**→**Widget**→**Menu.php**文件！
+&emsp;&emsp; 2.修改了**var**→**Widget**→**Menu.php**文件！
 
-**修改方法：** **var**→**Widget**→**Menu.php**（找到大概302行：public function output($class = 'focus', $childClass = 'focus')）
+**修改方法**： **var**→**Widget**→**Menu.php**（找到大概302行：public function output($class = 'focus', $childClass = 'focus')）
 
 复制以下内容替换：（如果你嫌麻烦，下载github中的此文件，替换也行！）
 
@@ -60,9 +60,9 @@ public function output()
 ```
 
 
-**新的问题：**1.菜单右侧图标一致；
+**新的问题**：1.菜单右侧图标一致；
 
-​                   2.插件页面 **footer** 显示问题；（这些都下次修复）
+&emsp;&emsp; &emsp;&emsp;&emsp;2.插件页面 **footer** 显示问题；（这些都下次修复）
 
 此外，各位大佬去我博客贡献下ip啊！
 
