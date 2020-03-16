@@ -1,5 +1,71 @@
 ## Typecho后台主题——Purple
 
+零、插件菜单面板
+------
+
+**修复：**1.修改了**menu.php**,增加一行代码，删除很多行代码！
+
+​            2.修改了**var**→**Widget**→**Menu.php**文件！
+
+**修改方法：** **var**→**Widget**→**Menu.php**（找到大概302行：public function output($class = 'focus', $childClass = 'focus')）
+
+复制以下内容替换：（如果你嫌麻烦，下载github中的此文件，替换也行！）
+
+```java
+public function output()
+{
+    foreach ($this->_menu as $key => $node) {
+        if (!$node[1] || !$key) {
+            continue;
+        }
+		echo "<li class=\"nav-item" . ($key == $this->_currentParent ? ' ' . $class : NULL) . "\">
+				<a class=\"nav-link\" data-toggle=\"collapse\" href=\"#{$node[0]}\" aria-expanded=\"false\" aria-controls=\"{$node[0]}\">
+					<span class=\"menu-title\">{$node[0]}</span>
+					<i class=\"menu-arrow\"></i>
+					<i class=\"mdi menu-icon mdi-book-open-page-variant\"></i>
+				</a>
+				<div class=\"collapse\" id=\"{$node[0]}\">
+					<ul class=\"nav flex-column sub-menu\">";
+
+        $last = 0;
+        foreach ($node[3] as $inKey => $inNode) {
+            if (!$inNode[4]) {
+                $last = $inKey;
+            }
+        }
+        
+        foreach ($node[3] as $inKey => $inNode) {
+            if ($inNode[4]) {
+                continue;
+            }
+
+            $classes = array();
+            if ($key == $this->_currentParent && $inKey == $this->_currentChild) {
+                $classes[] = $childClass;
+            } else if ($inNode[6]) {
+                continue;
+            }
+
+            if ($inKey == $last) {
+                $classes[] = 'last';
+            }
+
+			echo "<li class=\"nav-item\"> 
+					<a class=\"nav-link\" href=\"" . ($key == $this->_currentParent && $inKey == $this->_currentChild ? $this->_currentUrl : $inNode[2]) . "\">{$inNode[0]}</a>
+				  </li>";
+        }
+        echo "</ul></div></li>";
+    }
+}
+```
+
+
+**新的问题：****1.菜单右侧图标一致；
+
+​                   2.插件页面 **footer** 显示问题；（这些都下次修复）
+
+此外，各位大佬去我博客贡献下ip啊！
+
 一、主题介绍 `v1.0`
 ------
 
