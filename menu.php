@@ -83,71 +83,9 @@
 						</div>
 					</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php $options->adminUrl('index.php'); ?>">
-						<span class="menu-title">后台首页</span>
-						<i class="mdi mdi-television menu-icon"></i>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php $options->adminUrl('write-post.php'); ?>">
-						<span class="menu-title">撰写文章</span>
-						<i class="mdi mdi-pencil menu-icon"></i>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" data-toggle="collapse" href="#manage_content" aria-expanded="false" aria-controls="manage_content">
-						<span class="menu-title">内容管理</span>
-						<i class="menu-arrow"></i>
-						<i class="mdi mdi-book-open-page-variant menu-icon"></i>
-					</a>
-					<div class="collapse" id="manage_content">
-						<ul class="nav flex-column sub-menu">
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('manage-posts.php'); ?>">文章管理</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('manage-comments.php'); ?>">评论管理</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('manage-categories.php'); ?>">分类管理</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('manage-tags.php'); ?>">标签管理</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('manage-medias.php'); ?>">文件管理</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('write-page.php'); ?>">创建页面</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('manage-pages.php'); ?>">页面管理</a></li>
-						</ul>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php $options->adminUrl('profile.php'); ?>">
-						<span class="menu-title">个人中心</span>
-						<i class="mdi mdi-account menu-icon"></i>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php $options->adminUrl('options-general.php'); ?>">
-						<span class="menu-title">网站信息</span>
-						<i class="mdi mdi-information-outline menu-icon"></i>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?php $options->adminUrl('themes.php'); ?>">
-						<span class="menu-title">外观设置</span>
-						<i class="mdi mdi-folder-image menu-icon"></i>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link collapsed" data-toggle="collapse" href="#option_settings" aria-expanded="false" aria-controls="option_settings">
-						<span class="menu-title">其它设置</span>
-						<i class="menu-arrow"></i>
-						<i class="mdi mdi-settings menu-icon"></i>
-					</a>
-					<div class="collapse" id="option_settings" style="">
-						<ul class="nav flex-column sub-menu">
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('plugins.php'); ?>">插件管理</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('options-reading.php'); ?>">阅读设置</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('options-permalink.php'); ?>">永久链接</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('options-discussion.php'); ?>">评论设置</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('manage-users.php'); ?>">用户管理</a></li>
-							<li class="nav-item"> <a class="nav-link" href="<?php $options->adminUrl('backup.php'); ?>">数据备份</a></li>
-						</ul>
-					</div>
-				</li>
+				
+				<?php $menu->output(); ?>
+
 				<li class="nav-item sidebar-actions">
 					<span class="nav-link">
 						<a href="<?php $options->siteUrl(); ?>" class="btn btn-block btn-lg btn-gradient-primary btn-rounded">进入前台</a>
