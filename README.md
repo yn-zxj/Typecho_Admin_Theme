@@ -3,66 +3,13 @@
 零、插件菜单面板
 ------
 
-**修复**:1.修改了**menu.php**,增加一行代码，删除很多行代码！
+&emsp;&emsp;**修复**:1.修改了**menu.php**,增加一行代码，删除很多行代码！
 
-&emsp;&emsp; 2.修改了**var**→**Widget**→**Menu.php**文件！
+&emsp;&emsp; &emsp;&emsp;2.修改了**var**→**Widget**→**Menu.php**文件！
 
-**修改方法**： **var**→**Widget**→**Menu.php**（找到大概302行：public function output($class = 'focus', $childClass = 'focus')）
+&emsp;&emsp;**修复方法**： **var**→**Widget**→**Menu.php**[将git包中 **var** 目录下的 **Menu.php**替换]
 
-复制以下内容替换：（如果你嫌麻烦，下载github中的此文件，替换也行！）
-
-```php
-public function output()
-    {
-		$Icon = array(NULL,'mdi-television','mdi-pencil','mdi-book-open-page-variant','mdi-account','mdi-information-outline','mdi-folder-image','mdi-settings');
-		
-        foreach ($this->_menu as $key => $node) {
-            if (!$node[1] || !$key) {
-                continue;
-            }
-			
-			echo "<li class=\"nav-item" . ($key == $this->_currentParent ? ' ' . $class : NULL) . "\">
-					<a class=\"nav-link\" data-toggle=\"collapse\" href=\"#{$node[0]}\" aria-expanded=\"false\" aria-controls=\"{$node[0]}\">
-						<span class=\"menu-title\">{$node[0]}</span>
-						<i class=\"menu-arrow\"></i>
-						<i class=\"mdi menu-icon ".$Icon[$key]."\"></i>
-					</a>
-					<div class=\"collapse\" id=\"{$node[0]}\">
-						<ul class=\"nav flex-column sub-menu\">";
-
-            $last = 0;
-            foreach ($node[3] as $inKey => $inNode) {
-                if (!$inNode[4]) {
-                    $last = $inKey;
-                }
-            }
-            
-            foreach ($node[3] as $inKey => $inNode) {
-                if ($inNode[4]) {
-                    continue;
-                }
-
-                $classes = array();
-                if ($key == $this->_currentParent && $inKey == $this->_currentChild) {
-                    $classes[] = $childClass;
-                } else if ($inNode[6]) {
-                    continue;
-                }
-
-                if ($inKey == $last) {
-                    $classes[] = 'last';
-                }
-
-				echo "<li class=\"nav-item\"> 
-						<a class=\"nav-link\" href=\"" . ($key == $this->_currentParent && $inKey == $this->_currentChild ? $this->_currentUrl : $inNode[2]) . "\">{$inNode[0]}</a>
-					  </li>";
-            }
-            echo "</ul></div></li>";
-        }
-    }
-```
-
-&emsp;&emsp;**目前**：以为是大改，所以一般插件页面的布局是根据原版做的，和此套主题部搭配，需要自己改改！我有空在修复！
+&emsp;&emsp;**目前**：因为是大改，所以一般插件页面的布局是根据原版做的，和此套主题不搭配，需要自己改改！我有空在修复！
 
 &emsp;&emsp;**此外，各位大佬去我[博客](http://bt66.cn)贡献下ip啊！**
 
