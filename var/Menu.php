@@ -309,15 +309,18 @@ class Widget_Menu extends Typecho_Widget
      */
 	public function output()
     {
+		$Icon = array(NULL,'mdi-television','mdi-pencil','mdi-book-open-page-variant','mdi-account','mdi-information-outline','mdi-folder-image','mdi-settings');
+		
         foreach ($this->_menu as $key => $node) {
             if (!$node[1] || !$key) {
                 continue;
             }
+			
 			echo "<li class=\"nav-item" . ($key == $this->_currentParent ? ' ' . $class : NULL) . "\">
 					<a class=\"nav-link\" data-toggle=\"collapse\" href=\"#{$node[0]}\" aria-expanded=\"false\" aria-controls=\"{$node[0]}\">
 						<span class=\"menu-title\">{$node[0]}</span>
 						<i class=\"menu-arrow\"></i>
-						<i class=\"mdi menu-icon mdi-book-open-page-variant\"></i>
+						<i class=\"mdi menu-icon ".$Icon[$key]."\"></i>
 					</a>
 					<div class=\"collapse\" id=\"{$node[0]}\">
 						<ul class=\"nav flex-column sub-menu\">";
