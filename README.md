@@ -11,60 +11,60 @@
 
 复制以下内容替换：（如果你嫌麻烦，下载github中的此文件，替换也行！）
 
-```java
+```php
 public function output()
-{
-    foreach ($this->_menu as $key => $node) {
-        if (!$node[1] || !$key) {
-            continue;
-        }
-		echo "<li class=\"nav-item" . ($key == $this->_currentParent ? ' ' . $class : NULL) . "\">
-				<a class=\"nav-link\" data-toggle=\"collapse\" href=\"#{$node[0]}\" aria-expanded=\"false\" aria-controls=\"{$node[0]}\">
-					<span class=\"menu-title\">{$node[0]}</span>
-					<i class=\"menu-arrow\"></i>
-					<i class=\"mdi menu-icon mdi-book-open-page-variant\"></i>
-				</a>
-				<div class=\"collapse\" id=\"{$node[0]}\">
-					<ul class=\"nav flex-column sub-menu\">";
-
-        $last = 0;
-        foreach ($node[3] as $inKey => $inNode) {
-            if (!$inNode[4]) {
-                $last = $inKey;
-            }
-        }
-        
-        foreach ($node[3] as $inKey => $inNode) {
-            if ($inNode[4]) {
+    {
+		$Icon = array(NULL,'mdi-television','mdi-pencil','mdi-book-open-page-variant','mdi-account','mdi-information-outline','mdi-folder-image','mdi-settings');
+		
+        foreach ($this->_menu as $key => $node) {
+            if (!$node[1] || !$key) {
                 continue;
             }
+			
+			echo "<li class=\"nav-item" . ($key == $this->_currentParent ? ' ' . $class : NULL) . "\">
+					<a class=\"nav-link\" data-toggle=\"collapse\" href=\"#{$node[0]}\" aria-expanded=\"false\" aria-controls=\"{$node[0]}\">
+						<span class=\"menu-title\">{$node[0]}</span>
+						<i class=\"menu-arrow\"></i>
+						<i class=\"mdi menu-icon ".$Icon[$key]."\"></i>
+					</a>
+					<div class=\"collapse\" id=\"{$node[0]}\">
+						<ul class=\"nav flex-column sub-menu\">";
 
-            $classes = array();
-            if ($key == $this->_currentParent && $inKey == $this->_currentChild) {
-                $classes[] = $childClass;
-            } else if ($inNode[6]) {
-                continue;
+            $last = 0;
+            foreach ($node[3] as $inKey => $inNode) {
+                if (!$inNode[4]) {
+                    $last = $inKey;
+                }
             }
+            
+            foreach ($node[3] as $inKey => $inNode) {
+                if ($inNode[4]) {
+                    continue;
+                }
 
-            if ($inKey == $last) {
-                $classes[] = 'last';
+                $classes = array();
+                if ($key == $this->_currentParent && $inKey == $this->_currentChild) {
+                    $classes[] = $childClass;
+                } else if ($inNode[6]) {
+                    continue;
+                }
+
+                if ($inKey == $last) {
+                    $classes[] = 'last';
+                }
+
+				echo "<li class=\"nav-item\"> 
+						<a class=\"nav-link\" href=\"" . ($key == $this->_currentParent && $inKey == $this->_currentChild ? $this->_currentUrl : $inNode[2]) . "\">{$inNode[0]}</a>
+					  </li>";
             }
-
-			echo "<li class=\"nav-item\"> 
-					<a class=\"nav-link\" href=\"" . ($key == $this->_currentParent && $inKey == $this->_currentChild ? $this->_currentUrl : $inNode[2]) . "\">{$inNode[0]}</a>
-				  </li>";
+            echo "</ul></div></li>";
         }
-        echo "</ul></div></li>";
     }
-}
 ```
 
+&emsp;&emsp;**目前**：以为是大改，所以一般插件页面的布局是根据原版做的，和此套主题部搭配，需要自己改改！我有空在修复！
 
-**新的问题**：1.菜单右侧图标一致；
-
-&emsp;&emsp; &emsp;&emsp;&emsp;2.插件页面 **footer** 显示问题；（这些都下次修复）
-
-此外，各位大佬去我博客贡献下ip啊！
+&emsp;&emsp;**此外，各位大佬去我[博客](http://bt66.cn)贡献下ip啊！**
 
 一、主题介绍 `v1.0`
 ------
