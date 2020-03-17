@@ -6,8 +6,7 @@ include 'menu.php';
 $stat = Typecho_Widget::widget('Widget_Stat');
 ?>
 
-<div class="main-panel">
-<div class="content-wrapper">
+
 <div class="page-header">
   <h3 class="page-title">
 	<span class="page-title-icon bg-gradient-primary text-white mr-2">
@@ -133,10 +132,8 @@ $stat = Typecho_Widget::widget('Widget_Stat');
 	</div>
   </div>
 </div>
-</div>
 <?php
 include 'copyright.php';
 include 'common-js.php';
 include 'footer.php';
 ?>
-</div>

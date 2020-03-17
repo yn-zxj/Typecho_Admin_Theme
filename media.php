@@ -12,43 +12,41 @@ if (preg_match("/^([0-9]+)([a-z]{1,2})$/i", $phpMaxFilesize, $matches)) {
 Typecho_Widget::widget('Widget_Contents_Attachment_Edit')->to($attachment);
 ?>
 
-<div class="main-panel">
-	<div class="content-wrapper">
-		<div class="row">
-			<div class="col-md-12 grid-margin stretch-card">
-				<div class="card">
-				  <div class="card-body" role="main">
-					<h4 class="card-title"><?php include 'page-title.php'; ?></h4>
-					<div class="dropdown-divider"></div>
-					<div class="col-mb-12 col-tb-8" role="main">
-						<?php if ($attachment->attachment->isImage): ?>
-						<p><img src="<?php $attachment->attachment->url(); ?>" alt="<?php $attachment->attachment->name(); ?>" class="typecho-attachment-photo" /></p>
-						<?php endif; ?>
-						
-						<p>
-							<?php $mime = Typecho_Common::mimeIconType($attachment->attachment->mime); ?>
-							<i class="mime-<?php echo $mime; ?>"></i>
-							<a href=""><strong><?php $attachment->attachment->name(); ?></strong></a>
-							<span><?php echo number_format(ceil($attachment->attachment->size / 1024)); ?> Kb</span>
-						</p>
 
-						<p>
-							<input id="attachment-url" type="text" class="mono w-100" value="<?php $attachment->attachment->url(); ?>" readonly />
-						</p>
+<div class="row">
+	<div class="col-md-12 grid-margin stretch-card">
+		<div class="card">
+		  <div class="card-body" role="main">
+			<h4 class="card-title"><?php include 'page-title.php'; ?></h4>
+			<div class="dropdown-divider"></div>
+			<div class="col-mb-12 col-tb-8" role="main">
+				<?php if ($attachment->attachment->isImage): ?>
+				<p><img src="<?php $attachment->attachment->url(); ?>" alt="<?php $attachment->attachment->name(); ?>" class="typecho-attachment-photo" /></p>
+				<?php endif; ?>
+				
+				<p>
+					<?php $mime = Typecho_Common::mimeIconType($attachment->attachment->mime); ?>
+					<i class="mime-<?php echo $mime; ?>"></i>
+					<a href=""><strong><?php $attachment->attachment->name(); ?></strong></a>
+					<span><?php echo number_format(ceil($attachment->attachment->size / 1024)); ?> Kb</span>
+				</p>
 
-						<div id="upload-panel" class="p">
-							<div class="upload-area" draggable="true"><?php _e('拖放文件到这里<br>或者 %s选择文件上传%s', '<a href="###" class="upload-file">', '</a>'); ?></div>
-							<ul id="file-list"></ul>
-						</div>
-					</div>
-					<div class="col-mb-12 col-tb-4 edit-media" role="form">
-						<?php $attachment->form()->render(); ?>
-					</div>
-				  </div>
+				<p>
+					<input id="attachment-url" type="text" class="mono w-100" value="<?php $attachment->attachment->url(); ?>" readonly />
+				</p>
+
+				<div id="upload-panel" class="p">
+					<div class="upload-area" draggable="true"><?php _e('拖放文件到这里<br>或者 %s选择文件上传%s', '<a href="###" class="upload-file">', '</a>'); ?></div>
+					<ul id="file-list"></ul>
 				</div>
 			</div>
+			<div class="col-mb-12 col-tb-4 edit-media" role="form">
+				<?php $attachment->form()->render(); ?>
+			</div>
+		  </div>
 		</div>
 	</div>
+</div>
 <?php
 include 'copyright.php';
 include 'common-js.php';
@@ -197,4 +195,3 @@ $(document).ready(function() {
 <?php
 include 'footer.php';
 ?>
-</div>

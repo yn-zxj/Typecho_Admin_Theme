@@ -105,6 +105,8 @@
 				</li>
 			</ul>
 		</nav>
+		<div class="main-panel">
+			<div class="content-wrapper">
 		
 <script>
 $(document).ready(function () {
