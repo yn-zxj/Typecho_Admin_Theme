@@ -307,7 +307,7 @@ class Widget_Menu extends Typecho_Widget
      * @access public
      * @return string
      */
-	public function output()
+	public function output($class = 'active', $childClass = 'active')
     {
 		$Icon = array(NULL,'mdi-television','mdi-pencil','mdi-book-open-page-variant','mdi-account','mdi-information-outline','mdi-folder-image','mdi-settings');
 		
