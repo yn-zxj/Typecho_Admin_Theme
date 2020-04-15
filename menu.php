@@ -95,7 +95,7 @@
 							</div>
 							<ul class="gradient-bullet-list mt-4">
 							<?php $version = Typecho_Cookie::get('__typecho_check_version'); ?>
-								<li>当前版本：<?php echo $version['current']; ?></li>
+								<li>当前版本：<?php _e('%s (%s)',$prefixVersion, $suffixVersion); ?><?php echo $version['current']; ?></li>
 							<?php if ($version && $version['available']): ?>
 								<li>官方版本：<a href="<?php echo $version['link']; ?>"><?php echo $version['latest']; ?></a></li>
 							<?php endif; ?>	
