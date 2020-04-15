@@ -1,14 +1,5 @@
 ## Typecho后台主题——Purple
 
-零、插件菜单面板
-------
-
-&emsp;&emsp;**修复**:1.修改了**menu.php**,增加一行代码，删除很多行代码！
-
-&emsp;&emsp; &emsp;&emsp;2.修改了**var**→**Widget**→**Menu.php**文件！
-
-&emsp;&emsp;**修复方法**： **var**→**Widget**→**Menu.php**[将git包中 **var** 目录下的 **Menu.php**替换]
-
 &emsp;&emsp;**目前**：因为是大改，所以一般插件页面的布局是根据原版做的，和此套主题不搭配，需要自己改改！
 
 一、主题介绍 `v1.0`
