@@ -47,7 +47,7 @@ Typecho_Admin_Theme：[Github](https://github.com/yn-zxj/Typecho_Admin_Theme)
 
 &emsp;&emsp;下载本全部文件，解压至admin目录选择全部覆盖。建议新建admin目录并解压到内，重命名原admin目录，作为备份。
 
-**&emsp;&emsp; var**→**Widget**→**Menu.php** [  将git包中 **var** 目录下的 **Menu.php**替换  ]
+**&emsp;&emsp; var**→**Widget**→**Menu.php**  [  将git包中 **var** 目录下的 **Menu.php**替换  ]
 
 
 
