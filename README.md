@@ -25,11 +25,11 @@
 
 手机端：
 
-![手机端自适应](http://img.bt66.cn/blog3-1.png)
+![手机端自适应](http://chaizhou.cn/usr/uploads/2020/03/1700638479.png)
 
 电脑端：
 
-![电脑端](http://img.bt66.cn/blog3-2.png)
+![电脑端](http://chaizhou.cn/usr/uploads/2020/03/856718896.png)
 
 三、主题演示
 ------
