@@ -53,7 +53,5 @@ Typecho_Admin_Theme：[Github](https://github.com/yn-zxj/Typecho_Admin_Theme)
 
 六、结束语
 -----
-&emsp;&emsp;本主题的适配花的时间也不算太多，假如在使用过程中发现错误或者有什么好的建议，欢迎留言或者到github提交issues。最后如果你觉得此模板还不错，不妨推荐给其他人! 
-
-&emsp;&emsp;最后，如果觉得不错加个群吧，便于接受更新信息：[1074118225](https://qm.qq.com/cgi-bin/qm/qr?k=d0z5_7u1OrZ4B7q7d2u_XK9bMwT0mWAs&authKey=MOJoVVaZtMob6w/tKuH3eYn/6KkzFf4+EB3lzXZ1i9lGSCoE1hpD8sl/qggROQi3)
+&emsp;&emsp;本主题的适配花的时间也不算太多，假如在使用过程中发现错误或者有什么好的建议，欢迎留言或者到github提交issues。最后如果你觉得此模板还不错，不妨推荐给其他人!
 
